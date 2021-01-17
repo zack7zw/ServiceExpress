@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c87f8d01-4753-4047-a0b8-a1b4bbf573fd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1382/WebService/FlyAsiaWebService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FlyAsiaWebService.disco" MetadataType="Disco" ID="173b860e-fa7c-4036-996b-41b3b18ace26" SourceId="1" SourceUrl="http://localhost:1382/WebService/FlyAsiaWebService.svc?disco" />
+    <MetadataFile FileName="FlyAsiaWebService.xsd" MetadataType="Schema" ID="b062b3d8-4b79-4744-ae23-36ba2c9310c4" SourceId="1" SourceUrl="http://localhost:1382/WebService/FlyAsiaWebService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FlyAsiaWebService.wsdl" MetadataType="Wsdl" ID="aee3f990-d4ba-4337-9880-d23b94abd329" SourceId="1" SourceUrl="http://localhost:1382/WebService/FlyAsiaWebService.svc?wsdl" />
+    <MetadataFile FileName="FlyAsiaWebService1.xsd" MetadataType="Schema" ID="f649a2b6-4fb3-407d-bca9-6c36e0c1b852" SourceId="1" SourceUrl="http://localhost:1382/WebService/FlyAsiaWebService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FlyAsiaWebService2.xsd" MetadataType="Schema" ID="682e104b-d10a-4d32-aa16-5693dc5abb1c" SourceId="1" SourceUrl="http://localhost:1382/WebService/FlyAsiaWebService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

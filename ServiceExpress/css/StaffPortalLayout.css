@@ -1,0 +1,148 @@
+﻿/* external style sheet */
+
+/* Navigation bar code */
+/*
+nav
+{
+    margin-left: 6%;
+    clear:both;
+}
+
+nav ul li {
+float: left;
+width: 11%;
+background-color: white;
+line-height:3.5em;
+text-align: center;
+border-radius: 10px;
+opacity: 0.8;
+border: 3px blue solid;
+height: 97px;
+list-style-type:none;
+margin:0.8%;
+
+} */
+#mainNav { margin: 0; padding: 0; list-style: none; top: 35px; right: 0; background-color:White;  margin-left: 18%; }
+#mainNav li { float: left; }
+#mainNav a { display: block; padding: 20px 8px 17px; color: White; text-decoration: none; font-family: "Century Gothic", "Trebuchet MS", Arial, Helvetica, sans-serif; text-transform: uppercase; outline: none; }
+#mainNav .selected a,
+#mainNav a:hover { background: url(bg_mainNav_blue.png) repeat-x; color: #fff; }
+
+#mainNav.index .selected a,
+#mainNav .index a:hover { background-color: orange; }
+
+#mainNav.invester .selected a,
+#mainNav .invester a:hover {  background-color: Yellow; }
+
+#mainNav.products .selected a,
+#mainNav .products a:hover {  background-color: greenyellow; }
+
+
+#mainNav.career .selected a,
+#mainNav .career a:hover {  background-color:aqua; }
+
+#mainNav .contactUs a:hover {  background-color: aquamarine;}
+
+
+/*
+
+nav position: fixed;text-decoration: none;
+    font-size: 24px;
+    width:100%;
+}
+
+nav ul li:hover
+{
+    color: #FFF;
+    background-color: #0CF;
+}
+
+nav ul li a:hover
+{
+    color: #FFFF00;
+}
+
+nav ul ul 
+{
+    position:absolute;
+    overflow:hidden;
+    z-index:2000;
+    width:60%;
+    height:40%;
+    display:none;
+    margin-left: -0.4em;
+}
+
+
+nav ul li:hover > ul 
+{
+    display: block;
+}
+
+nav ul ul li
+
+{   float:none;
+    text-align:center;
+    line-height:18px;
+    padding-top:13px; 
+} */ */*
+
+/* header code */
+
+
+header
+{
+    width: 100%;
+    margin-left: 10%;
+    float: left;
+}
+/* body code */
+
+marquee
+{
+    background-color:white;
+    opacity: 0.8;
+    height: 30px;
+}
+    
+
+body
+{
+    background-image: url(images/Background.jpg);
+    color: black;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+article
+{
+    background-color: Black;
+    opacity: 0.8;
+}
+
+footer
+{
+    color: White;
+    text-align: center;
+    clear: both;
+    background-color: Black;
+    opacity: 0.8;
+}
+
+ p
+{
+    
+    color: black;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+    width: 941px;
+}
+
+
+      h2  {
+            color: white;
+	        font-family: "Comic Sans MS", cursive, sans-serif;
+            background-color: orange;
+            text-align: center;
+            text-decoration: underline;
+            border: 1px solid black;
+            margin: 0px 0px 5px 5px;
+        }

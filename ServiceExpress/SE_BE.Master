@@ -1,0 +1,331 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SE_BE.master.cs" Inherits="ServiceExpress.SE_BE" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        html {
+            background-image: url(images/colour2bg.jpg);
+            color: black;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+        /*  NavBackground  {
+    background-image: url(images/colour3bg.jpg) !important;
+    background-size: 100%;
+    width: 100%;*/
+        }
+
+        #fixed {
+            /* position: fixed;*/
+            right: 2px;
+            left: -2px;
+            z-index: 1029;
+            border-radius: 0;
+            background-color: white;
+            margin-bottom: 10px;
+            top: 183px;
+            height: 46px;
+            border-left-style: solid;
+            border-left-color: inherit;
+            border-left-width: 1px;
+            border-right-style: solid;
+            border-right-color: inherit;
+            border-right-width: 1px;
+            border-top-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: inherit;
+            border-bottom-width: 1px;
+            width: 100%;
+            table-layout: fixed;
+            margin-top: -20px;
+        }
+
+            #fixed tr {
+                height: 1em;
+            }
+
+            #fixed td {
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+        #FixedPosition {
+            background-image: url(images/colour2bg.jpg);
+            position: fixed;
+            right: 2px;
+            left: -2px;
+            z-index: 1028;
+        }
+
+            #FixedPosition table {
+                background-color: white;
+            }
+
+        .auto-style1 {
+            width: 100%;
+        }
+
+
+        .auto-style5 {
+            width: 45px;
+            height: 34px;
+        }
+
+        .auto-style6 {
+            width: 67px;
+            height: 34px;
+        }
+
+        .auto-style7 {
+            width: 88px;
+            height: 34px;
+        }
+
+        .auto-style8 {
+            height: 34px;
+        }
+
+        .auto-style10 {
+            height: 34px;
+            width: 365px;
+        }
+
+        .auto-style11 {
+            width: 63px;
+            height: 34px;
+        }
+
+        .auto-style12 {
+            height: 34px;
+            width: 170px;
+        }
+    </style>
+    <script src="Scripts/jquery-2.0.3.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            //alert($("#ContentPlaceHolder1_TextBoxabc").val());
+            $('.nav li a').click(function (e) {
+
+                $('.nav li').removeClass('active');
+
+                var $parent = $(this).parent();
+                if (!$parent.hasClass('active')) {
+                    $parent.addClass('active');
+                    document.getElementById("home").removeAttribute("style");
+                    document.getElementById("contactInfo").removeAttribute("style");
+                    document.getElementById("event").removeAttribute("style");
+                    document.getElementById("gallery").removeAttribute("style");
+                    //Load the content
+                    //e.g.
+                    //load the page that the link was pointing to
+                    //e.preventDefault();
+                    //$('.active').load($(this).find(a).attr('href'));
+                    // this.$element.toggleClass('active') 
+
+                }
+
+            });
+        });
+
+        function homeActive() {
+            //document.all.home.style.backgroundColor = "#3B3B3B";
+            document.all.home.style.color = "white";
+            document.getElementById("home").style.backgroundColor = "#3B3B3B";
+        }
+
+        function galleryActive() {
+            document.all.gallery.style.color = "white";
+            document.getElementById("gallery").style.backgroundColor = "#3B3B3B";
+        }
+
+        function eventActive() {
+            //document.all.home.style.backgroundColor = "#3B3B3B";
+            document.all.event.style.color = "white";
+            document.getElementById("event").style.backgroundColor = "#3B3B3B";
+        }
+
+        function contactInfoActive() {
+            //document.all.home.style.backgroundColor = "#3B3B3B";
+            document.all.event.style.color = "white";
+            document.getElementById("contactInfo").style.backgroundColor = "#3B3B3B";
+        }
+
+        function PrintDivContent(divId) {
+            var printContent = document.getElementById(divId);
+            var WinPrint = window.open('', '', 'left=0,top=0,toolbar=0,sta­tus=0');
+            WinPrint.document.write(printContent.innerHTML);
+            WinPrint.document.close();
+            WinPrint.focus();
+            WinPrint.print();
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>
+
+        <div id="FixedPosition">
+
+            <div class="page-header no-margin no-padding">
+            </div>
+            <div class="container">
+
+                <div class="navbar navbar-inverse navbar-static-top ">
+                    <div class="container">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" rel="home" href="#" title="Buy Sell Camera">
+                            <img style="max-width: 100px; margin-top: -12px; max-height: 45px; height: 92px; width: 123px;"
+                                src="Images/LogoSvcExp.gif" />
+                        </a>
+
+                        <a class="navbar-brand" style="border: none;" href="#">Service Express</a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a id="home" href="#">Home</a></li>
+                            
+                                <li><a href="CustomerOrder.aspx">View Purchase Order</a></li>
+                                <li><a href="ProdCatalogueGV.aspx">View Products</a></li>
+
+                                <li><a href="RetrievePOforDO.aspx">Delivery View</a></li>
+
+                                <li class="dropdown">
+                                    <a id="contactInfo" href="#" class="dropdown-toggle" data-toggle="dropdown">Invoice<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="Invoice.aspx">Invoice</a></li>
+                                        <li><a href="InvoiceCreate.aspx">Create Invoice</a></li>
+                                        <li><a href="InvoicePayment.aspx">Payment record</a></li>
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+                            <asp:Button ID="btnLogout" class="navbar-button btn pull-right btn-primary" Style="margin-top: 5px; text-align: center;" runat="server" CausesValidation="False" OnClick="btnLogout_Click" Text="Log Out" />
+
+                        </div>
+                        <!--/.nav-collapse -->
+                    </div>
+                </div>
+
+            </div>
+            <table class="table table-borderless" id="fixed">
+                <tr class="trHeight">
+                    <td class="auto-style5"></td>
+                    <td class="auto-style6">
+                        <asp:Label ID="lblSid" runat="server">StaffID: </asp:Label>
+                        <br />
+
+                    </td>
+                    <td class="auto-style7">
+                        <asp:Label ID="lblstaffID" runat="server"></asp:Label>
+
+                    </td>
+                    <td class="auto-style11">
+
+                        <asp:Label ID="lblN" runat="server">Name:  </asp:Label>
+
+                    </td>
+                    <td class="auto-style12">
+
+                        <asp:Label ID="lblName" runat="server"></asp:Label>
+
+                    </td>
+                    <td class="auto-style10">&nbsp;</td>
+                    <td class="auto-style11">Date:
+                                                
+                    </td>
+                    <td class="auto-style8">
+
+                        <asp:Label ID="lblDate" runat="server"></asp:Label>
+
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-11">
+                    <div class=" panel panel-default">
+
+                        <div class="panel-body">
+                            <br />
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container">
+                <p class="navbar-text pull-left">Site Built by 21st-Planner</p>
+                <a class="navbar-button btn-info btn pull-right">Click me for more enquiry!!</a>
+            </div>
+        </div>
+
+        <div class="modal fade" id="contact" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <p>Contact details</p>
+
+                        <table class="nav-justified">
+                            <tr>
+                                <td class="auto-style1">
+                                    <asp:Label ID="Label1" runat="server" Text="Name: "></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="tbName" runat="server"></asp:TextBox>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style1">
+                                    <asp:Label ID="lblConNo" runat="server" Text="Contact No.:"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="tbConNo" runat="server"></asp:TextBox>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style1">&nbsp;</td>
+                                <td>
+                                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <br />
+
+    </form>
+</body>
+</html>
